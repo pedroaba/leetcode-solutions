@@ -1,0 +1,41 @@
+SUBROUTINE mergeSort(array)
+    If len(array) > 1 Then
+       # This is the point where the array is divided into two subarrays
+       halfArray = len(array) / 2
+    
+       FirstHalf = array[:halfArray]
+       # The first half of the data set
+    
+       SecondHalf = array[halfArray:]
+       # The second half of the data set
+    
+       # Sort the two halves
+       mergeSort(FirstHalf)
+       mergeSort(SecondHalf)
+    
+       k = 0
+    
+       # Begin swapping values
+       While i < len(FirstHalf) and j < len(SecondHalf)
+          If FirstHalf[i] < SecondHalf[j] Then
+            array[k] = FirstHalf[i]
+            i += 1
+          Else 
+            array[k] = SecondHalf[j]
+            j += 1
+            k += 1
+          EndIf
+       EndWhile
+    EndIf
+    
+    outputList(array)
+ENDSUBROUTINE
+
+SUBROUTINE outputList()
+    FOR i in len(array)
+        OUTPUT array[i]
+    ENDFOR
+ENDSUBROUTINE
+
+array = [6, 5, 12, 10, 9, 1]
+mergeSort(array)
