@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "tsx index.ts"
+    "r": "tsx script-runner.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "devDependencies": {
     "@types/node": "^20.10.4",
     "tsx": "^4.6.2"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
   }
 }
